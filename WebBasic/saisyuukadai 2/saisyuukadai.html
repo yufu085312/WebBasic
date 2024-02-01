@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>タイピングゲーム</title>
+        <meta charset="utf-8">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src=slideshow.js></script>
+        <link rel="stylesheet" type="text/css" href="saisyuukadai.css" />  
+          <script src="saisyuukadai60.js"></script>   
+          <script>
+            let x = 100;
+            function larger()  { x *= 1.2; document.body.style.fontSize = x + '%'; }
+            function smaller() { x /= 1.2; document.body.style.fontSize = x + '%'; }
+            </script>   
+    </head>
+    <body>  
+        <div class="imgt">
+            <p class="title">タイピングゲーム</p>
+            <p>★これは有名なことわざのタイピングゲームです</p>
+        </div>
+        <button type="button" onclick="smaller()">画面小さく</button>
+        <button type="button" onclick="larger()">画面大きく</button>
+            <div class="wrap1">
+            <input type="button" id="start_button" value="スタート" onclick="ready1()" style="text-align: center">
+             <div id="count"></div>
+                <h1><div id="japanese"></div></h1>
+                <h2><div id="word"></div></h2>
+                 <div id="scoredis"></div>     
+            </div>    
+            <div>
+                <button id="prev">左にスライド</button>
+                <button id="next">右にスライド</button>
+            </div>
+                <div id="photoFrame">
+            <div id="imageArea"></div>
+                </div>
+    </body> 
+</html>

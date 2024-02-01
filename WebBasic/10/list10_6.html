@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScriptの練習</title>
+        <script>
+          function showImage() {
+            var htmlstr = "";
+            for(var i=1; i<=3; i++) {
+              htmlstr += "<img src='images/frog" + i + ".jpg'>";
+            }
+            document.getElementById("imageArea").innerHTML = htmlstr;
+            this.disabled = true;
+          }
+          window.onload = function() {
+            document.getElementById("btn").onclick = showImage;
+          };
+        </script>
+      </head>
+      <body>
+        <button id="btn" disabled="">読込</button>
+        <div id="imageArea"><img src="images/frog1.jpg"><img src="images/frog2.jpg"><img src="images/frog3.jpg"></div>
+      
+    </body>
+</html>
